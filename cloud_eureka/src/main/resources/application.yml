@@ -4,6 +4,9 @@ spring:
   application:
     name: eurekaserver
 eureka:
+  server:
+    eviction-interval-timer-in-ms: 2000 #移除无效服务的时间
+    enable-self-preservation: false #关闭自我保护，可以快速移除无效服务
   client:
     service-url:
       defaultZone: http://localhost:8088/eureka #注册地址

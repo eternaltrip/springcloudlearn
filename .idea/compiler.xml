@@ -13,12 +13,16 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloud_nacos_order" target="19" />
+      <module name="cloud_nacos_user" target="19" />
       <module name="cloud_usesr" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud_eureka" options="-parameters" />
+      <module name="cloud_nacos_order" options="-parameters" />
+      <module name="cloud_nacos_user" options="-parameters" />
       <module name="cloud_order" options="-parameters" />
       <module name="cloud_user" options="-parameters" />
       <module name="cloud_usesr" options="-parameters" />

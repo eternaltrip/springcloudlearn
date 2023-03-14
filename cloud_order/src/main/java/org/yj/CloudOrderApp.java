@@ -2,8 +2,8 @@ package org.yj;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
+//import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+//import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 import org.yj.config.LoadBalancerConfig;
@@ -13,7 +13,7 @@ import org.yj.config.LoadBalancerConfig;
  * 比如要访问userservice这个服务，这里就要配置负载均衡设置
  *
  */
-@LoadBalancerClient(name="userservice",configuration = LoadBalancerConfig.class)
+//@LoadBalancerClient(name="userservice",configuration = LoadBalancerConfig.class)
 @SpringBootApplication
 public class CloudOrderApp
 {
@@ -24,7 +24,7 @@ public class CloudOrderApp
 
 
     @Bean
-    @LoadBalanced
+//    @LoadBalanced
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
